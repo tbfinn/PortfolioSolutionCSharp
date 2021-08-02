@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11B8E6A3-CA21-43B9-995D-2B4A0A42A378}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PortfolioSolutionCSharp</RootNamespace>
+    <AssemblyName>PortfolioSolutionCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\packages\DockPanelSuite.3.0.6\lib\net40\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller.cs" />
+    <Compile Include="DetectorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetectorView.Designer.cs">
+      <DependentUpon>DetectorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IController.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="InstrumentationPortfolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstrumentationPortfolio.Designer.cs">
+      <DependentUpon>InstrumentationPortfolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IViewModel.cs" />
+    <Compile Include="MainWindow1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow1.Designer.cs">
+      <DependentUpon>MainWindow1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow2.Designer.cs">
+      <DependentUpon>MainWindow2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs" />
+    <Compile Include="Output.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Output.Designer.cs">
+      <DependentUpon>Output.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanView.Designer.cs">
+      <DependentUpon>PlanView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="PropertiesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesWindow.Designer.cs">
+      <DependentUpon>PropertiesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RobotView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RobotView.Designer.cs">
+      <DependentUpon>RobotView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template.cs" />
+    <Compile Include="ViewModel.cs" />
+    <EmbeddedResource Include="InstrumentationPortfolio.resx">
+      <DependentUpon>InstrumentationPortfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonDataLibrary\CommonDataLibrary.csproj">
+      <Project>{897a5f6a-c09b-4e3d-8fa4-e80b60898e92}</Project>
+      <Name>CommonDataLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBManager\DBManager.csproj">
+      <Project>{9a7d7045-0512-4d22-8f00-d2e0f345b1b5}</Project>
+      <Name>DBManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DetectorManager\DetectorManager.csproj">
+      <Project>{71fd8e96-6b87-4489-a1cb-96fdc7315ad0}</Project>
+      <Name>DetectorManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlanManager\PlanManager.csproj">
+      <Project>{f738de9a-bd14-4fcc-a345-892a3170ef3c}</Project>
+      <Name>PlanManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RobotManager\RobotManager.csproj">
+      <Project>{8cb5feb7-f868-4830-a02a-81acc46803ae}</Project>
+      <Name>RobotManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RunManager\RunManager.csproj">
+      <Project>{da01a258-a477-4f55-8da7-1e5077d30de8}</Project>
+      <Name>RunManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

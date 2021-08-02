@@ -7,19 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeifenLuo.WinFormsUI.Docking;
 
 namespace PortfolioSolutionCSharp
 {
-    public partial class Form1 : Form
+    public partial class MainWindow2 : DockContent
     {
-        public Form1()
+        public MainWindow2()
         {
             InitializeComponent();
-
-
-
-
-
         }
     }
 }
