@@ -15,6 +15,11 @@ namespace PortfolioSolutionCSharp
         public Form1()
         {
             InitializeComponent();
+
+
+
+
+
         }
     }
 }
