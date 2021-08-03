@@ -109,6 +109,9 @@
     <EmbeddedResource Include="InstrumentationPortfolio.resx">
       <DependentUpon>InstrumentationPortfolio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlanView.resx">
+      <DependentUpon>PlanView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
